@@ -3,7 +3,7 @@ import os
 import numpy as np
 
 from prediction_service import prediction
-from prediction_service.lencoderext import LabelEncoderExt
+from le_custom.lencoderext import LabelEncoderExt
 
 webapp_root = "webapp"
 
