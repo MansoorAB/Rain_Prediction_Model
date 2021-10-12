@@ -4,9 +4,6 @@ import pickle
 import numpy as np
 import pandas as pd
 
-# for heroku deployment only, comment for local deployment
-from lencoderext import LabelEncoderExt
-
 schema_path = os.path.join("prediction_service", "schema_in.json")
 actual_cols = []
 
@@ -45,12 +42,12 @@ def predict(data):
 
     print ('41. opening lencoder file')
 
-    with open(encoder_path, 'rb') as f:
-        le = pickle.load(f)
-        print('42. lencoder open success.')
+    # with open(encoder_path, 'rb') as f:
+    #     le = pickle.load(f)
+    #     print('42. lencoder open success.')
 
-    col = 'WindGustDir'
-    data[col] = le[col].transform(data[col].astype('str'))
+    # col = 'WindGustDir'
+    # data[col] = le[col].transform(data[col].astype('str'))
     print ('43. transformation success')
 
     with open(scaler_path, 'rb') as file:

@@ -3,14 +3,7 @@ import os
 import numpy as np
 
 from prediction_service import prediction
-
-# for local deployment, use the below invocation
-# from prediction_service.lencoderext import LabelEncoderExt
-
-# for heroku deployment, uncomment this and comment line 8
-import sys
-sys.path.append('prediction_service')
-
+from prediction_service.lencoderext import LabelEncoderExt
 
 webapp_root = "webapp"
 
