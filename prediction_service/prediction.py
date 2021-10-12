@@ -4,8 +4,6 @@ import pickle
 import numpy as np
 import pandas as pd
 
-from sklearn.preprocessing import LabelEncoder
-
 schema_path = os.path.join("prediction_service", "schema_in.json")
 actual_cols = []
 
