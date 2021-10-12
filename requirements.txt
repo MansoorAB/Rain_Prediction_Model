@@ -1,0 +1,15 @@
+Flask
+Flask-Cors
+Flask-MonitoringDashboard
+gunicorn
+imblearn
+Jinja2==2.11.0
+jupyterlab
+MarkupSafe==1.1.1
+matplotlib
+numpy
+pandas
+scikit-learn
+seaborn
+statsmodels
+xgboost

@@ -1,0 +1,18 @@
+{
+    "Humidity3pm": {
+        "min": 0.0,
+        "max": 100.0
+    },
+    "Cloud3pm": {
+        "min": 0.0,
+        "max": 9.0
+    },
+    "Sunshine": {
+        "min": 0.0,
+        "max": 14.5
+    },
+    "Cloud9am": {
+        "min": 0.0,
+        "max": 9.0
+    }
+}
