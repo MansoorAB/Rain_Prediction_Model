@@ -35,4 +35,5 @@ class LabelEncoderExt(object):
             if unique_item not in self.label_encoder.classes_:
                 new_data_list = ['Unknown' if x==unique_item else x for x in new_data_list]
 
+        print('*** - lencoder.py is working fine')
         return self.label_encoder.transform(new_data_list)

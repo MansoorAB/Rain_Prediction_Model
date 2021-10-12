@@ -42,11 +42,15 @@ def predict(data):
     data = pd.DataFrame(data, columns=actual_cols)
     print(data)   
 
+    print ('41. opening lencoder file')
+
     with open(encoder_path, 'rb') as f:
         le = pickle.load(f)
+        print('42. lencoder open success')
 
     col = 'WindGustDir'
     data[col] = le[col].transform(data[col].astype('str'))
+    print ('43. transformation success')
 
     with open(scaler_path, 'rb') as file:
         sc = pickle.load(file)
