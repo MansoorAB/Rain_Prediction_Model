@@ -6,8 +6,6 @@ import pandas as pd
 
 from sklearn.preprocessing import LabelEncoder
 
-# from prediction_service.lencoderext import LabelEncoderExt
-
 schema_path = os.path.join("prediction_service", "schema_in.json")
 actual_cols = []
 
@@ -33,7 +31,7 @@ class InvalidColCount(Exception):
         self.message = message
         super().__init__(self.message)
 
-class LabelEncoderExt(object):
+# class LabelEncoderExt(object):
     def __init__(self):
         """
         It differs from LabelEncoder by handling new classes and providing a value for it [Unknown]
@@ -42,9 +40,6 @@ class LabelEncoderExt(object):
         self.label_encoder = LabelEncoder()
         # self.classes_ = self.label_encoder.classes_
 
-    def hi_world(self):
-        print('Hello World!')
-    
     def fit(self, data_list):
         """
         This will fit the encoder for all the unique values and introduce unknown value
