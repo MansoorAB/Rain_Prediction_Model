@@ -3,13 +3,12 @@ import os
 import numpy as np
 
 from prediction_service import prediction
-from le_custom.lencoderext import LabelEncoderExt
+from prediction_service.lencoderext import LabelEncoderExt
 
 webapp_root = "webapp"
 
 static_dir = os.path.join(webapp_root, "static")
 template_dir = os.path.join(webapp_root, "templates")
-image_dir = os.path.join(webapp_root, "img")
 
 app = Flask(__name__, static_folder=static_dir,template_folder=template_dir)
 
