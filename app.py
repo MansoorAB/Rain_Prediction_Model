@@ -2,10 +2,13 @@ from flask import Flask, render_template, request, jsonify
 import os
 import numpy as np
 
+import sys
+sys.path.append('prediction_service/')  # for heroku deployment
+
 import prediction
 from lencoderext import LabelEncoderExt
 
-webapp_root = "../webapp"
+webapp_root = "webapp"
 
 static_dir = os.path.join(webapp_root, "static")
 template_dir = os.path.join(webapp_root, "templates")

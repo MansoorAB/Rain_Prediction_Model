@@ -1,1 +1,1 @@
-web: gunicorn prediction_service.app:app
+web: gunicorn app:app
