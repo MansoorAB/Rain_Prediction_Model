@@ -33,7 +33,7 @@ class InvalidColCount(Exception):
 
 def predict(data):
     
-    encoder_path = os.path.join("prediction_service", "model", "labelencoder.pkl" )
+    encoder_path = os.path.join("prediction_service", "model", "le_mapping.pkl" )
     scaler_path = os.path.join("prediction_service", "model", "scaler.pkl" )
     model_path = os.path.join("prediction_service", "model", "dtclassifier.pkl")
 
@@ -44,12 +44,11 @@ def predict(data):
     print ('41. opening lencoder file')
 
     with open(encoder_path, 'rb') as f:
-        le = pickle.load(f)
-        print('42. lencoder open success.')
+        le_map = pickle.load(f)
 
     col = 'WindGustDir'
-    data[col] = le[col].transform(data[col].astype('str'))
-    print ('43. transformation success')
+    data[col] = data[col].map(le_map[col])
+    print('43. Encoding successful.')
 
     with open(scaler_path, 'rb') as file:
         sc = pickle.load(file)
@@ -78,6 +77,8 @@ def get_schema(schema_path=schema_path):
 def validate_input(dict_request):
 
     global actual_cols
+    global windgust_values
+
     cols_list_path = os.path.join("prediction_service", "model", 
                                     "column_names.pkl")
     with open(cols_list_path, 'rb') as f:
