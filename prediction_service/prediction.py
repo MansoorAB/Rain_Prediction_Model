@@ -46,7 +46,7 @@ def predict(data):
 
     with open(encoder_path, 'rb') as f:
         le = pickle.load(f)
-        print('42. lencoder open success')
+        print('42. lencoder open success.')
 
     col = 'WindGustDir'
     data[col] = le[col].transform(data[col].astype('str'))
