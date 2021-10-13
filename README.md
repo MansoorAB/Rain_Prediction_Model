@@ -120,7 +120,7 @@ width="40" height="40"/> </a>
 width="40" height="40"/> </a>
 
 <a href="https://imbalanced-learn.org/stable/" target="_blank"> 
-<img src="https://imgur.com/U43W65a" alt="imblearn" width="40" height="40"/> </a>
+<img src="https://i.imgur.com/L8zy0MY.png" alt="imblearn" width="40" height="40"/> </a>
 
 <a href="https://flask.palletsprojects.com/" target="_blank"> 
 <img src="https://www.vectorlogo.zone/logos/pocoo_flask/pocoo_flask-icon.svg" alt="flask" width="40" height="40"/> </a>
